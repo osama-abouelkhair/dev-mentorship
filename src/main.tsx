@@ -6,7 +6,7 @@ import './index.css'
 
 const clerkKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY as string | undefined
 const application = clerkKey ? (
-  <ClerkProvider publishableKey={clerkKey} afterSignOutUrl="/">
+  <ClerkProvider publishableKey={clerkKey} afterSignOutUrl={import.meta.env.BASE_URL}>
     <App clerkEnabled />
   </ClerkProvider>
 ) : <App clerkEnabled={false} />
