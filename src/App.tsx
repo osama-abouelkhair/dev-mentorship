@@ -9,7 +9,7 @@ function Icon({name,size=20}:{name:IconName,size?:number}){
 function AuthAction({children,small=false,clerkEnabled,onPreview}:{children:ReactNode,small?:boolean,clerkEnabled:boolean,onPreview:()=>void}){
   const cls=small?'nav-cta':'button primary'
   if(!clerkEnabled)return <button className={cls} onClick={onPreview}>{children}</button>
-  return <><Show when="signed-out"><SignUpButton mode="modal"><button className={cls}>{children}</button></SignUpButton></Show><Show when="signed-in">{small?<UserButton/>:<a className={cls} href="#how">يلا نبدأ <Icon name="arrow"/></a>}</Show></>
+  return <><Show when="signed-out"><SignUpButton mode="modal"><button className={cls}>{children}</button></SignUpButton></Show><Show when="signed-in"><a className={cls} href="#how">{small?children:<>يلا نبدأ <Icon name="arrow"/></>}</a></Show></>
 }
 
 export default function App({clerkEnabled}:{clerkEnabled:boolean}){
