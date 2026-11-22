@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 
-const CALENDLY_URL = 'https://calendly.com/osama-abulkhair/dev-mentorship'
+const CALENDLY_URL = 'https://calendly.com/osama-abouelkhair-codifybilarabi/codifybilarabi'
 
 type IconName = 'arrow'|'check'|'code'|'calendar'|'spark'|'target'|'close'|'clock'|'video'
 function Icon({name,size=20}:{name:IconName,size?:number}){
